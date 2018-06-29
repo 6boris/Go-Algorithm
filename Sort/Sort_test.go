@@ -8,7 +8,7 @@ import (
 
 const MIN_NUM  = 1
 const MAX_NUM  = 100
-const ARRAY_NUM  = 30000
+const ARRAY_NUM  = 10990
 
 type Data struct {
 	Input  []int
@@ -83,6 +83,17 @@ func TestSort(t *testing.T) {
 		}
 	})
 
+	// 选择排序测试
+	t.Run("TestSelectSort...", func(t *testing.T) {
+		var tmp = getData()
+		got := SelectSort(tmp.Input)
+		want := tmp.Output
+
+		if !isEqualData(got, want) {
+			t.Error("Got:", got, "Want:", want)
+		}
+	})
+
 	// 快速排序测试
 	t.Run("TestQuickSort...", func(t *testing.T) {
 		var tmp = getData()
@@ -109,6 +120,72 @@ func TestSort(t *testing.T) {
 	t.Run("TestHeapSort...", func(t *testing.T) {
 		var tmp = getData()
 		got := HeapSort(tmp.Input)
+		want := tmp.Output
+
+		if !isEqualData(got, want) {
+			t.Error("Got:", got, "Want:", want)
+		}
+	})
+
+	// 希尔排序测试
+	t.Run("TestShellSort...", func(t *testing.T) {
+		var tmp = getData()
+		got := ShellSort(tmp.Input)
+		want := tmp.Output
+
+		if !isEqualData(got, want) {
+			t.Error("Got:", got, "Want:", want)
+		}
+	})
+
+	// 鸡尾酒排序测试
+	t.Run("TestCocktailShakerSort...", func(t *testing.T) {
+		var tmp = getData()
+		got := CocktailShakerSort(tmp.Input)
+		want := tmp.Output
+
+		if !isEqualData(got, want) {
+			t.Error("Got:", got, "Want:", want)
+		}
+	})
+
+	// 梳排序测试
+	//t.Run("TestCombSort...", func(t *testing.T) {
+	//	var tmp = getData()
+	//	got := CombSort(tmp.Input)
+	//	want := tmp.Output
+	//
+	//	if !isEqualData(got, want) {
+	//		t.Error("Got:", got, "Want:", want)
+	//	}
+	//})
+
+	// 计数排序测试
+	t.Run("TestCountingSort...", func(t *testing.T) {
+		var tmp = getData()
+		got := CountingSort(tmp.Input)
+		want := tmp.Output
+
+		if !isEqualData(got, want) {
+			t.Error("Got:", got, "Want:", want)
+		}
+	})
+
+	// 地精排序测试
+	t.Run("TestGnomeSort...", func(t *testing.T) {
+		var tmp = getData()
+		got := GnomeSort(tmp.Input)
+		want := tmp.Output
+
+		if !isEqualData(got, want) {
+			t.Error("Got:", got, "Want:", want)
+		}
+	})
+
+	// 奇偶排序测试
+	t.Run("TestOddEvenSort...", func(t *testing.T) {
+		var tmp = getData()
+		got := OddEvenSort(tmp.Input)
 		want := tmp.Output
 
 		if !isEqualData(got, want) {
