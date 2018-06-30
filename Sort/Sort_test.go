@@ -61,7 +61,7 @@ func TestSort(t *testing.T) {
 
 	fmt.Println(MIN_NUM + rand.Intn(MAX_NUM - MIN_NUM))
 
-	// 冒泡排序测试
+	//冒泡排序测试
 	t.Run("TestBubbleSort...", func(t *testing.T) {
 		var tmp = getData()
 		got := BubbleSort(tmp.Input)
@@ -100,7 +100,7 @@ func TestSort(t *testing.T) {
 		got := QuickSort(tmp.Input)
 		want := tmp.Output
 
-		if !isEqualData(got, want) {
+			if !isEqualData(got, want) {
 			t.Error("Got:", got, "Want:", want)
 		}
 	})
