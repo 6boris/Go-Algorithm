@@ -1,14 +1,14 @@
 package Sort
 
 import (
-	"testing"
 	"fmt"
 	"math/rand"
+	"testing"
 )
 
-const MIN_NUM  = 1
-const MAX_NUM  = 100
-const ARRAY_NUM  = 10990
+const MIN_NUM = 1
+const MAX_NUM = 100
+const ARRAY_NUM = 109900000
 
 type Data struct {
 	Input  []int
@@ -25,9 +25,9 @@ func init() {
 // 初始化数据
 func initData() Data {
 	sourceData := new(Data)
-	for i:=0 ; i<ARRAY_NUM ; i++{
-		sourceData.Input = append(sourceData.Input,MIN_NUM + rand.Intn(MAX_NUM - MIN_NUM))
-		sourceData.Output = append(sourceData.Output , sourceData.Input[i])
+	for i := 0; i < ARRAY_NUM; i++ {
+		sourceData.Input = append(sourceData.Input, MIN_NUM+rand.Intn(MAX_NUM-MIN_NUM))
+		sourceData.Output = append(sourceData.Output, sourceData.Input[i])
 	}
 	sourceData.Output = QuickSort(sourceData.Input)
 
@@ -59,7 +59,7 @@ func isEqualData(data1 []int, data2 []int) bool {
 
 func TestSort(t *testing.T) {
 
-	fmt.Println(MIN_NUM + rand.Intn(MAX_NUM - MIN_NUM))
+	fmt.Println(MIN_NUM + rand.Intn(MAX_NUM-MIN_NUM))
 
 	//冒泡排序测试
 	t.Run("TestBubbleSort...", func(t *testing.T) {
@@ -100,7 +100,7 @@ func TestSort(t *testing.T) {
 		got := QuickSort(tmp.Input)
 		want := tmp.Output
 
-			if !isEqualData(got, want) {
+		if !isEqualData(got, want) {
 			t.Error("Got:", got, "Want:", want)
 		}
 	})
