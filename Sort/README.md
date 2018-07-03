@@ -1,10 +1,19 @@
-![Sort](https://github.com/kayles/Go-Algorithm/blob/master/vendor/images/Sort_Frist.png
+![Sort](https://github.com/kayles/Go-Algorithm/blob/master/Static/images/Sort_Frist.png
 )
 # 排序
 
 ## 1.冒泡排序(Bubble Sort)
-[Wikipedia](https://en.wikipedia.org/wiki/Bubble_sort)
 
+### 概要
+
+### 属性
+* 最差时间复杂度 O(n^2)
+* 最好时间复杂度 O(n)
+* 平均时间复杂度 O(n^2)
+* 空间复杂度 O(1)
+* 是否稳定 (稳定)
+
+查看解释 [Wikipedia](https://en.wikipedia.org/wiki/Bubble_sort)
 
 ## 2.插入排序(Insert Sort)
 [Wikipedia](https://en.wikipedia.org/wiki/Insertion_sort)
