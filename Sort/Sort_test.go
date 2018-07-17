@@ -8,7 +8,7 @@ import (
 
 const MIN_NUM = 1
 const MAX_NUM = 100
-const ARRAY_NUM = 40990000
+const ARRAY_NUM = 10000000
 
 type Data struct {
 	Input  []int
@@ -103,6 +103,7 @@ func TestSort(t *testing.T) {
 		if !isEqualData(got, want) {
 			t.Error("Got:", got, "Want:", want)
 		}
+
 	})
 
 	// 归并排序测试
